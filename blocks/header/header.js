@@ -236,7 +236,7 @@ export default async function decorate(block) {
   </div>
   `);
 
-  navTools.append(search);
+  navTools?.append(search);
 
   const searchPanel = navTools.querySelector('.nav-search-panel');
   const searchButton = navTools.querySelector('.nav-search-button');
