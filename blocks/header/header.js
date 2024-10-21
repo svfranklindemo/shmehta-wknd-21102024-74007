@@ -275,8 +275,8 @@ export default async function decorate(block) {
   isDesktop?.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
 
   const navWrapper = document.createElement('div');
-  navWrapper?.className = 'header-nav-wrapper';
-  navWrapper?.append(nav);
+  navWrapper.className = 'header-nav-wrapper';
+  navWrapper.append(nav);
   block.append(navWrapper);
 
   addAnimation();
