@@ -238,9 +238,9 @@ export default async function decorate(block) {
 
   navTools?.append(search);
 
-  const searchPanel = navTools.querySelector('.nav-search-panel');
-  const searchButton = navTools.querySelector('.nav-search-button');
-  const searchInput = searchPanel.querySelector('input');
+  const searchPanel = navTools?.querySelector('.nav-search-panel');
+  const searchButton = navTools?.querySelector('.nav-search-button');
+  const searchInput = searchPanel?.querySelector('input');
 
   function toggleSearch(state) {
     const show = state ?? !searchPanel.classList.contains('nav-panel--show');
