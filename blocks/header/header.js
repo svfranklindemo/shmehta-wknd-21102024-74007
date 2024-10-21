@@ -120,14 +120,16 @@ function setActiveTab() {
   const path = matchResult ? matchResult[1] : null;
   const navTabLinks = document.querySelector('.nav-sections ul');
 
-  [...navTabLinks.children].forEach((tab) => {
-    const link = tab.querySelector('a');
-    const linkTitle = link.title.toLowerCase();
-
-    if (linkTitle === path || (linkTitle === 'shop' && ['products', 'equipment', 'search'].includes(path))) {
-      link.classList.add('active');
-    }
-  });
+  if(navTabLinks) {
+    [...navTabLinks.children].forEach((tab) => {
+      const link = tab.querySelector('a');
+      const linkTitle = link.title.toLowerCase();
+  
+      if (linkTitle === path || (linkTitle === 'shop' && ['products', 'equipment', 'search'].includes(path))) {
+        link.classList.add('active');
+      }
+    });
+  }
 
   /* temp - only for the demo since the adventures landing page is the "home page"
   */
